@@ -1,0 +1,341 @@
+DECISION TREE LOGICAL RULES
+==================================================
+
+Rules are applied sequentially. When a rule matches, the class is returned and no further rules are checked.
+
+RULE 1:
+IF NOT 'declaracion' AND NOT 'complemento' AND NOT 'solicitud' AND NOT 'cambio de' AND NOT 'fallecimiento' AND NOT 'requerimiento' AND NOT 'requerida' AND NOT 'comunica que' AND NOT 'datos bancarios' AND NOT 'justificante' AND NOT 'traslado' AND NOT 'certificado' AND NOT 'reclamacion' AND NOT 'jubilacion' AND NOT 'devolucion' AND NOT 'direccion' AND NOT 'cuenta' AND NOT 'anual' AND NOT 'renovacion' AND 'lismi'
+THEN CLASS: PSPD CONTROL ANUAL
+CONFIDENCE: 1.000
+--------------------------------------------------
+
+RULE 2:
+IF NOT 'declaracion' AND NOT 'complemento' AND NOT 'solicitud' AND NOT 'cambio de' AND NOT 'fallecimiento' AND NOT 'requerimiento' AND NOT 'requerida' AND NOT 'comunica que' AND NOT 'datos bancarios' AND NOT 'justificante' AND NOT 'traslado' AND 'certificado' AND NOT 'solicita' AND NOT 'sdo' AND 'defuncion'
+THEN CLASS: FALLECIDOS
+CONFIDENCE: 1.000
+--------------------------------------------------
+
+RULE 3:
+IF NOT 'declaracion' AND NOT 'complemento' AND NOT 'solicitud' AND NOT 'cambio de' AND NOT 'fallecimiento' AND NOT 'requerimiento' AND NOT 'requerida' AND NOT 'comunica que' AND NOT 'datos bancarios' AND NOT 'justificante' AND NOT 'traslado' AND 'certificado' AND NOT 'solicita' AND 'sdo'
+THEN CLASS: NOMINAS
+CONFIDENCE: 1.000
+--------------------------------------------------
+
+RULE 4:
+IF NOT 'declaracion' AND NOT 'complemento' AND 'solicitud' AND NOT 'cambio' AND 'alquiler'
+THEN CLASS: COMPL ALQUILER PNC
+CONFIDENCE: 1.000
+--------------------------------------------------
+
+RULE 5:
+IF NOT 'declaracion' AND 'complemento' AND NOT 'persona' AND 'la' AND 'vivienda'
+THEN CLASS: COMPL ALQUILER PNC
+CONFIDENCE: 1.000
+--------------------------------------------------
+
+RULE 6:
+IF NOT 'declaracion' AND 'complemento' AND 'persona'
+THEN CLASS: PNC REVIS INST PARTE
+CONFIDENCE: 1.000
+--------------------------------------------------
+
+RULE 7:
+IF 'declaracion' AND NOT 'lismi' AND 'prestaciones'
+THEN CLASS: PSPD CONTROL ANUAL
+CONFIDENCE: 1.000
+--------------------------------------------------
+
+RULE 8:
+IF 'declaracion' AND 'lismi'
+THEN CLASS: PSPD CONTROL ANUAL
+CONFIDENCE: 0.980
+--------------------------------------------------
+
+RULE 9:
+IF NOT 'declaracion' AND NOT 'complemento' AND 'solicitud' AND NOT 'cambio' AND NOT 'alquiler' AND NOT 'traslado' AND NOT 'de certificado' AND 'jubilacion'
+THEN CLASS: PNC TRAMITE INICIAL
+CONFIDENCE: 0.975
+--------------------------------------------------
+
+RULE 10:
+IF NOT 'declaracion' AND NOT 'complemento' AND NOT 'solicitud' AND NOT 'cambio de' AND NOT 'fallecimiento' AND NOT 'requerimiento' AND NOT 'requerida' AND NOT 'comunica que' AND 'datos bancarios'
+THEN CLASS: NOMINAS
+CONFIDENCE: 0.969
+--------------------------------------------------
+
+RULE 11:
+IF 'declaracion' AND NOT 'lismi' AND NOT 'prestaciones' AND NOT '2025' AND NOT 'para'
+THEN CLASS: PNC CONTROL ANUAL
+CONFIDENCE: 0.960
+--------------------------------------------------
+
+RULE 12:
+IF NOT 'declaracion' AND 'complemento' AND NOT 'persona' AND NOT 'la'
+THEN CLASS: COMPL ALQUILER PNC
+CONFIDENCE: 0.957
+--------------------------------------------------
+
+RULE 13:
+IF NOT 'declaracion' AND NOT 'complemento' AND NOT 'solicitud' AND NOT 'cambio de' AND NOT 'fallecimiento' AND NOT 'requerimiento' AND NOT 'requerida' AND NOT 'comunica que' AND NOT 'datos bancarios' AND NOT 'justificante' AND 'traslado'
+THEN CLASS: PNC TRASLADO EXPTE
+CONFIDENCE: 0.944
+--------------------------------------------------
+
+RULE 14:
+IF NOT 'declaracion' AND NOT 'complemento' AND NOT 'solicitud' AND NOT 'cambio de' AND NOT 'fallecimiento' AND NOT 'requerimiento' AND NOT 'requerida' AND NOT 'comunica que' AND NOT 'datos bancarios' AND NOT 'justificante' AND NOT 'traslado' AND NOT 'certificado' AND NOT 'reclamacion' AND NOT 'jubilacion' AND NOT 'devolucion' AND 'direccion'
+THEN CLASS: NOMINAS
+CONFIDENCE: 0.938
+--------------------------------------------------
+
+RULE 15:
+IF NOT 'declaracion' AND NOT 'complemento' AND NOT 'solicitud' AND NOT 'cambio de' AND NOT 'fallecimiento' AND NOT 'requerimiento' AND NOT 'requerida' AND NOT 'comunica que' AND NOT 'datos bancarios' AND NOT 'justificante' AND NOT 'traslado' AND NOT 'certificado' AND NOT 'reclamacion' AND NOT 'jubilacion' AND NOT 'devolucion' AND NOT 'direccion' AND NOT 'cuenta' AND NOT 'anual' AND NOT 'renovacion' AND NOT 'lismi' AND NOT 'alquiler' AND NOT 'pnc' AND NOT 'contributivas de' AND 'de invalidez no'
+THEN CLASS: PNC TRAMITE INICIAL
+CONFIDENCE: 0.933
+--------------------------------------------------
+
+RULE 16:
+IF NOT 'declaracion' AND NOT 'complemento' AND 'solicitud' AND NOT 'cambio' AND NOT 'alquiler' AND 'traslado'
+THEN CLASS: PNC TRASLADO EXPTE
+CONFIDENCE: 0.929
+--------------------------------------------------
+
+RULE 17:
+IF NOT 'declaracion' AND NOT 'complemento' AND NOT 'solicitud' AND NOT 'cambio de' AND NOT 'fallecimiento' AND NOT 'requerimiento' AND NOT 'requerida' AND 'comunica que'
+THEN CLASS: PNC REVIS INST PARTE
+CONFIDENCE: 0.926
+--------------------------------------------------
+
+RULE 18:
+IF NOT 'declaracion' AND NOT 'complemento' AND 'solicitud' AND NOT 'cambio' AND NOT 'alquiler' AND NOT 'traslado' AND 'de certificado'
+THEN CLASS: NOMINAS
+CONFIDENCE: 0.923
+--------------------------------------------------
+
+RULE 19:
+IF NOT 'declaracion' AND NOT 'complemento' AND NOT 'solicitud' AND 'cambio de' AND NOT 'de'
+THEN CLASS: NOMINAS
+CONFIDENCE: 0.912
+--------------------------------------------------
+
+RULE 20:
+IF NOT 'declaracion' AND NOT 'complemento' AND NOT 'solicitud' AND NOT 'cambio de' AND NOT 'fallecimiento' AND NOT 'requerimiento' AND NOT 'requerida' AND NOT 'comunica que' AND NOT 'datos bancarios' AND NOT 'justificante' AND NOT 'traslado' AND 'certificado' AND 'solicita'
+THEN CLASS: NOMINAS
+CONFIDENCE: 0.900
+--------------------------------------------------
+
+RULE 21:
+IF NOT 'declaracion' AND NOT 'complemento' AND NOT 'solicitud' AND NOT 'cambio de' AND NOT 'fallecimiento' AND NOT 'requerimiento' AND NOT 'requerida' AND NOT 'comunica que' AND NOT 'datos bancarios' AND 'justificante'
+THEN CLASS: NOMINAS
+CONFIDENCE: 0.892
+--------------------------------------------------
+
+RULE 22:
+IF NOT 'declaracion' AND NOT 'complemento' AND NOT 'solicitud' AND NOT 'cambio de' AND NOT 'fallecimiento' AND NOT 'requerimiento' AND NOT 'requerida' AND NOT 'comunica que' AND NOT 'datos bancarios' AND NOT 'justificante' AND NOT 'traslado' AND NOT 'certificado' AND NOT 'reclamacion' AND NOT 'jubilacion' AND NOT 'devolucion' AND NOT 'direccion' AND NOT 'cuenta' AND NOT 'anual' AND NOT 'renovacion' AND NOT 'lismi' AND NOT 'alquiler' AND NOT 'pnc' AND 'contributivas de'
+THEN CLASS: PNC CONTROL ANUAL
+CONFIDENCE: 0.889
+--------------------------------------------------
+
+RULE 23:
+IF NOT 'declaracion' AND NOT 'complemento' AND 'solicitud' AND NOT 'cambio' AND NOT 'alquiler' AND NOT 'traslado' AND NOT 'de certificado' AND NOT 'jubilacion' AND 'revision'
+THEN CLASS: PNC REVIS INST PARTE
+CONFIDENCE: 0.875
+--------------------------------------------------
+
+RULE 24:
+IF NOT 'declaracion' AND NOT 'complemento' AND NOT 'solicitud' AND NOT 'cambio de' AND NOT 'fallecimiento' AND NOT 'requerimiento' AND NOT 'requerida' AND NOT 'comunica que' AND NOT 'datos bancarios' AND NOT 'justificante' AND NOT 'traslado' AND NOT 'certificado' AND NOT 'reclamacion' AND NOT 'jubilacion' AND 'devolucion'
+THEN CLASS: NOMINAS
+CONFIDENCE: 0.864
+--------------------------------------------------
+
+RULE 25:
+IF NOT 'declaracion' AND NOT 'complemento' AND NOT 'solicitud' AND NOT 'cambio de' AND NOT 'fallecimiento' AND NOT 'requerimiento' AND NOT 'requerida' AND NOT 'comunica que' AND NOT 'datos bancarios' AND NOT 'justificante' AND NOT 'traslado' AND NOT 'certificado' AND NOT 'reclamacion' AND NOT 'jubilacion' AND NOT 'devolucion' AND NOT 'direccion' AND NOT 'cuenta' AND NOT 'anual' AND 'renovacion'
+THEN CLASS: PNC CONTROL ANUAL
+CONFIDENCE: 0.857
+--------------------------------------------------
+
+RULE 26:
+IF NOT 'declaracion' AND NOT 'complemento' AND 'solicitud' AND NOT 'cambio' AND NOT 'alquiler' AND NOT 'traslado' AND NOT 'de certificado' AND NOT 'jubilacion' AND NOT 'revision' AND NOT 'para personas' AND NOT 'renovacion' AND NOT 'de' AND NOT 'tener' AND NOT 'comunicacion de' AND NOT 'esta' AND NOT 'de pension'
+THEN CLASS: PNC TRAMITE INICIAL
+CONFIDENCE: 0.857
+--------------------------------------------------
+
+RULE 27:
+IF NOT 'declaracion' AND NOT 'complemento' AND NOT 'solicitud' AND NOT 'cambio de' AND 'fallecimiento'
+THEN CLASS: FALLECIDOS
+CONFIDENCE: 0.829
+--------------------------------------------------
+
+RULE 28:
+IF NOT 'declaracion' AND NOT 'complemento' AND NOT 'solicitud' AND NOT 'cambio de' AND NOT 'fallecimiento' AND NOT 'requerimiento' AND NOT 'requerida' AND NOT 'comunica que' AND NOT 'datos bancarios' AND NOT 'justificante' AND NOT 'traslado' AND NOT 'certificado' AND NOT 'reclamacion' AND NOT 'jubilacion' AND NOT 'devolucion' AND NOT 'direccion' AND NOT 'cuenta' AND NOT 'anual' AND NOT 'renovacion' AND NOT 'lismi' AND NOT 'alquiler' AND NOT 'pnc' AND NOT 'contributivas de' AND NOT 'de invalidez no' AND 'expediente' AND NOT 'contributiva' AND '2023'
+THEN CLASS: PNC CONTROL ANUAL
+CONFIDENCE: 0.800
+--------------------------------------------------
+
+RULE 29:
+IF NOT 'declaracion' AND NOT 'complemento' AND NOT 'solicitud' AND NOT 'cambio de' AND NOT 'fallecimiento' AND NOT 'requerimiento' AND NOT 'requerida' AND NOT 'comunica que' AND NOT 'datos bancarios' AND NOT 'justificante' AND NOT 'traslado' AND NOT 'certificado' AND NOT 'reclamacion' AND NOT 'jubilacion' AND NOT 'devolucion' AND NOT 'direccion' AND NOT 'cuenta' AND NOT 'anual' AND NOT 'renovacion' AND NOT 'lismi' AND NOT 'alquiler' AND 'pnc' AND NOT 'pnc' AND '2025'
+THEN CLASS: PNC CONTROL ANUAL
+CONFIDENCE: 0.800
+--------------------------------------------------
+
+RULE 30:
+IF NOT 'declaracion' AND NOT 'complemento' AND NOT 'solicitud' AND NOT 'cambio de' AND NOT 'fallecimiento' AND NOT 'requerimiento' AND NOT 'requerida' AND NOT 'comunica que' AND NOT 'datos bancarios' AND NOT 'justificante' AND NOT 'traslado' AND NOT 'certificado' AND NOT 'reclamacion' AND NOT 'jubilacion' AND NOT 'devolucion' AND NOT 'direccion' AND NOT 'cuenta' AND NOT 'anual' AND NOT 'renovacion' AND NOT 'lismi' AND 'alquiler'
+THEN CLASS: COMPL ALQUILER PNC
+CONFIDENCE: 0.800
+--------------------------------------------------
+
+RULE 31:
+IF NOT 'declaracion' AND NOT 'complemento' AND NOT 'solicitud' AND NOT 'cambio de' AND NOT 'fallecimiento' AND 'requerimiento' AND NOT 'expte' AND NOT 'el' AND 'pension no contributiva de'
+THEN CLASS: PNC CONTROL ANUAL
+CONFIDENCE: 0.800
+--------------------------------------------------
+
+RULE 32:
+IF NOT 'declaracion' AND NOT 'complemento' AND NOT 'solicitud' AND NOT 'cambio de' AND NOT 'fallecimiento' AND 'requerimiento' AND 'expte'
+THEN CLASS: PNC CONTROL ANUAL
+CONFIDENCE: 0.800
+--------------------------------------------------
+
+RULE 33:
+IF NOT 'declaracion' AND NOT 'complemento' AND NOT 'solicitud' AND 'cambio de' AND 'de'
+THEN CLASS: PNC REVIS INST PARTE
+CONFIDENCE: 0.800
+--------------------------------------------------
+
+RULE 34:
+IF NOT 'declaracion' AND NOT 'complemento' AND NOT 'solicitud' AND NOT 'cambio de' AND NOT 'fallecimiento' AND NOT 'requerimiento' AND NOT 'requerida' AND NOT 'comunica que' AND NOT 'datos bancarios' AND NOT 'justificante' AND NOT 'traslado' AND NOT 'certificado' AND NOT 'reclamacion' AND NOT 'jubilacion' AND NOT 'devolucion' AND NOT 'direccion' AND NOT 'cuenta' AND NOT 'anual' AND NOT 'renovacion' AND NOT 'lismi' AND NOT 'alquiler' AND NOT 'pnc' AND NOT 'contributivas de' AND NOT 'de invalidez no' AND NOT 'expediente' AND NOT 'comunicacion' AND NOT 'no contributiva' AND 'que' AND 'que'
+THEN CLASS: NOMINAS
+CONFIDENCE: 0.750
+--------------------------------------------------
+
+RULE 35:
+IF NOT 'declaracion' AND NOT 'complemento' AND NOT 'solicitud' AND NOT 'cambio de' AND NOT 'fallecimiento' AND NOT 'requerimiento' AND NOT 'requerida' AND NOT 'comunica que' AND NOT 'datos bancarios' AND NOT 'justificante' AND NOT 'traslado' AND NOT 'certificado' AND NOT 'reclamacion' AND NOT 'jubilacion' AND NOT 'devolucion' AND NOT 'direccion' AND NOT 'cuenta' AND 'anual'
+THEN CLASS: PNC CONTROL ANUAL
+CONFIDENCE: 0.750
+--------------------------------------------------
+
+RULE 36:
+IF NOT 'declaracion' AND NOT 'complemento' AND 'solicitud' AND NOT 'cambio' AND NOT 'alquiler' AND NOT 'traslado' AND NOT 'de certificado' AND NOT 'jubilacion' AND NOT 'revision' AND NOT 'para personas' AND 'renovacion'
+THEN CLASS: PNC CONTROL ANUAL
+CONFIDENCE: 0.750
+--------------------------------------------------
+
+RULE 37:
+IF NOT 'declaracion' AND NOT 'complemento' AND NOT 'solicitud' AND NOT 'cambio de' AND NOT 'fallecimiento' AND NOT 'requerimiento' AND NOT 'requerida' AND NOT 'comunica que' AND NOT 'datos bancarios' AND NOT 'justificante' AND NOT 'traslado' AND NOT 'certificado' AND NOT 'reclamacion' AND NOT 'jubilacion' AND NOT 'devolucion' AND NOT 'direccion' AND 'cuenta'
+THEN CLASS: NOMINAS
+CONFIDENCE: 0.741
+--------------------------------------------------
+
+RULE 38:
+IF NOT 'declaracion' AND NOT 'complemento' AND 'solicitud' AND 'cambio'
+THEN CLASS: NOMINAS
+CONFIDENCE: 0.737
+--------------------------------------------------
+
+RULE 39:
+IF NOT 'declaracion' AND NOT 'complemento' AND NOT 'solicitud' AND NOT 'cambio de' AND NOT 'fallecimiento' AND 'requerimiento' AND NOT 'expte' AND NOT 'el' AND NOT 'pension no contributiva de'
+THEN CLASS: PNC TRAMITE INICIAL
+CONFIDENCE: 0.727
+--------------------------------------------------
+
+RULE 40:
+IF NOT 'declaracion' AND NOT 'complemento' AND NOT 'solicitud' AND NOT 'cambio de' AND NOT 'fallecimiento' AND NOT 'requerimiento' AND NOT 'requerida' AND NOT 'comunica que' AND NOT 'datos bancarios' AND NOT 'justificante' AND NOT 'traslado' AND NOT 'certificado' AND NOT 'reclamacion' AND 'jubilacion'
+THEN CLASS: PNC TRAMITE INICIAL
+CONFIDENCE: 0.714
+--------------------------------------------------
+
+RULE 41:
+IF NOT 'declaracion' AND NOT 'complemento' AND 'solicitud' AND NOT 'cambio' AND NOT 'alquiler' AND NOT 'traslado' AND NOT 'de certificado' AND NOT 'jubilacion' AND NOT 'revision' AND NOT 'para personas' AND NOT 'renovacion' AND NOT 'de' AND 'tener'
+THEN CLASS: PNC CONTROL ANUAL
+CONFIDENCE: 0.667
+--------------------------------------------------
+
+RULE 42:
+IF NOT 'declaracion' AND NOT 'complemento' AND 'solicitud' AND NOT 'cambio' AND NOT 'alquiler' AND NOT 'traslado' AND NOT 'de certificado' AND NOT 'jubilacion' AND NOT 'revision' AND 'para personas'
+THEN CLASS: PSPD TRAMITE INICIAL
+CONFIDENCE: 0.667
+--------------------------------------------------
+
+RULE 43:
+IF NOT 'declaracion' AND NOT 'complemento' AND NOT 'solicitud' AND NOT 'cambio de' AND NOT 'fallecimiento' AND NOT 'requerimiento' AND 'requerida'
+THEN CLASS: PNC TRAMITE INICIAL
+CONFIDENCE: 0.654
+--------------------------------------------------
+
+RULE 44:
+IF 'declaracion' AND NOT 'lismi' AND NOT 'prestaciones' AND '2025'
+THEN CLASS: PSPD CONTROL ANUAL
+CONFIDENCE: 0.625
+--------------------------------------------------
+
+RULE 45:
+IF NOT 'declaracion' AND NOT 'complemento' AND NOT 'solicitud' AND NOT 'cambio de' AND NOT 'fallecimiento' AND NOT 'requerimiento' AND NOT 'requerida' AND NOT 'comunica que' AND NOT 'datos bancarios' AND NOT 'justificante' AND NOT 'traslado' AND NOT 'certificado' AND NOT 'reclamacion' AND NOT 'jubilacion' AND NOT 'devolucion' AND NOT 'direccion' AND NOT 'cuenta' AND NOT 'anual' AND NOT 'renovacion' AND NOT 'lismi' AND NOT 'alquiler' AND NOT 'pnc' AND NOT 'contributivas de' AND NOT 'de invalidez no' AND 'expediente' AND 'contributiva'
+THEN CLASS: PNC REVIS INST PARTE
+CONFIDENCE: 0.615
+--------------------------------------------------
+
+RULE 46:
+IF NOT 'declaracion' AND NOT 'complemento' AND NOT 'solicitud' AND NOT 'cambio de' AND NOT 'fallecimiento' AND NOT 'requerimiento' AND NOT 'requerida' AND NOT 'comunica que' AND NOT 'datos bancarios' AND NOT 'justificante' AND NOT 'traslado' AND 'certificado' AND NOT 'solicita' AND NOT 'sdo' AND NOT 'defuncion' AND NOT 'pnc'
+THEN CLASS: PNC TRAMITE INICIAL
+CONFIDENCE: 0.605
+--------------------------------------------------
+
+RULE 47:
+IF NOT 'declaracion' AND NOT 'complemento' AND NOT 'solicitud' AND NOT 'cambio de' AND NOT 'fallecimiento' AND 'requerimiento' AND NOT 'expte' AND 'el'
+THEN CLASS: PNC CONTROL ANUAL
+CONFIDENCE: 0.600
+--------------------------------------------------
+
+RULE 48:
+IF NOT 'declaracion' AND NOT 'complemento' AND NOT 'solicitud' AND NOT 'cambio de' AND NOT 'fallecimiento' AND NOT 'requerimiento' AND NOT 'requerida' AND NOT 'comunica que' AND NOT 'datos bancarios' AND NOT 'justificante' AND NOT 'traslado' AND NOT 'certificado' AND NOT 'reclamacion' AND NOT 'jubilacion' AND NOT 'devolucion' AND NOT 'direccion' AND NOT 'cuenta' AND NOT 'anual' AND NOT 'renovacion' AND NOT 'lismi' AND NOT 'alquiler' AND NOT 'pnc' AND NOT 'contributivas de' AND NOT 'de invalidez no' AND NOT 'expediente' AND NOT 'comunicacion' AND 'no contributiva'
+THEN CLASS: PNC CONTROL ANUAL
+CONFIDENCE: 0.588
+--------------------------------------------------
+
+RULE 49:
+IF NOT 'declaracion' AND NOT 'complemento' AND NOT 'solicitud' AND NOT 'cambio de' AND NOT 'fallecimiento' AND NOT 'requerimiento' AND NOT 'requerida' AND NOT 'comunica que' AND NOT 'datos bancarios' AND NOT 'justificante' AND NOT 'traslado' AND NOT 'certificado' AND NOT 'reclamacion' AND NOT 'jubilacion' AND NOT 'devolucion' AND NOT 'direccion' AND NOT 'cuenta' AND NOT 'anual' AND NOT 'renovacion' AND NOT 'lismi' AND NOT 'alquiler' AND NOT 'pnc' AND NOT 'contributivas de' AND NOT 'de invalidez no' AND 'expediente' AND NOT 'contributiva' AND NOT '2023'
+THEN CLASS: PNC TRAMITE INICIAL
+CONFIDENCE: 0.585
+--------------------------------------------------
+
+RULE 50:
+IF NOT 'declaracion' AND 'complemento' AND NOT 'persona' AND 'la' AND NOT 'vivienda'
+THEN CLASS: PNC REVIS INST PARTE
+CONFIDENCE: 0.556
+--------------------------------------------------
+
+RULE 51:
+IF NOT 'declaracion' AND NOT 'complemento' AND NOT 'solicitud' AND NOT 'cambio de' AND NOT 'fallecimiento' AND NOT 'requerimiento' AND NOT 'requerida' AND NOT 'comunica que' AND NOT 'datos bancarios' AND NOT 'justificante' AND NOT 'traslado' AND NOT 'certificado' AND NOT 'reclamacion' AND NOT 'jubilacion' AND NOT 'devolucion' AND NOT 'direccion' AND NOT 'cuenta' AND NOT 'anual' AND NOT 'renovacion' AND NOT 'lismi' AND NOT 'alquiler' AND 'pnc' AND 'pnc' AND NOT 'de'
+THEN CLASS: PNC TRAMITE INICIAL
+CONFIDENCE: 0.552
+--------------------------------------------------
+
+RULE 52:
+IF NOT 'declaracion' AND NOT 'complemento' AND NOT 'solicitud' AND NOT 'cambio de' AND NOT 'fallecimiento' AND NOT 'requerimiento' AND NOT 'requerida' AND NOT 'comunica que' AND NOT 'datos bancarios' AND NOT 'justificante' AND NOT 'traslado' AND 'certificado' AND NOT 'solicita' AND NOT 'sdo' AND NOT 'defuncion' AND 'pnc'
+THEN CLASS: NOMINAS
+CONFIDENCE: 0.529
+--------------------------------------------------
+
+RULE 53:
+IF NOT 'declaracion' AND NOT 'complemento' AND NOT 'solicitud' AND NOT 'cambio de' AND NOT 'fallecimiento' AND NOT 'requerimiento' AND NOT 'requerida' AND NOT 'comunica que' AND NOT 'datos bancarios' AND NOT 'justificante' AND NOT 'traslado' AND NOT 'certificado' AND NOT 'reclamacion' AND NOT 'jubilacion' AND NOT 'devolucion' AND NOT 'direccion' AND NOT 'cuenta' AND NOT 'anual' AND NOT 'renovacion' AND NOT 'lismi' AND NOT 'alquiler' AND NOT 'pnc' AND NOT 'contributivas de' AND NOT 'de invalidez no' AND NOT 'expediente' AND 'comunicacion'
+THEN CLASS: PNC REVIS INST PARTE
+CONFIDENCE: 0.517
+--------------------------------------------------
+
+RULE 54:
+IF NOT 'declaracion' AND NOT 'complemento' AND NOT 'solicitud' AND NOT 'cambio de' AND NOT 'fallecimiento' AND NOT 'requerimiento' AND NOT 'requerida' AND NOT 'comunica que' AND NOT 'datos bancarios' AND NOT 'justificante' AND NOT 'traslado' AND NOT 'certificado' AND NOT 'reclamacion' AND NOT 'jubilacion' AND NOT 'devolucion' AND NOT 'direccion' AND NOT 'cuenta' AND NOT 'anual' AND NOT 'renovacion' AND NOT 'lismi' AND NOT 'alquiler' AND NOT 'pnc' AND NOT 'contributivas de' AND NOT 'de invalidez no' AND NOT 'expediente' AND NOT 'comunicacion' AND NOT 'no contributiva' AND NOT 'que' AND 'contributiva'
+THEN CLASS: PNC TRAMITE INICIAL
+CONFIDENCE: 0.506
+--------------------------------------------------
+
+RULE 55:
+IF NOT 'declaracion' AND NOT 'complemento' AND NOT 'solicitud' AND NOT 'cambio de' AND NOT 'fallecimiento' AND NOT 'requerimiento' AND NOT 'requerida' AND NOT 'comunica que' AND NOT 'datos bancarios' AND NOT 'justificante' AND NOT 'traslado' AND NOT 'certificado' AND NOT 'reclamacion' AND NOT 'jubilacion' AND NOT 'devolucion' AND NOT 'direccion' AND NOT 'cuenta' AND NOT 'anual' AND NOT 'renovacion' AND NOT 'lismi' AND NOT 'alquiler' AND 'pnc' AND 'pnc' AND 'de'
+THEN CLASS: NOMINAS
+CONFIDENCE: 0.500
+--------------------------------------------------
+
+RULE 56:
+IF NOT 'declaracion' AND NOT 'complemento' AND 'solicitud' AND NOT 'cambio' AND NOT 'alquiler' AND NOT 'traslado' AND NOT 'de certificado' AND NOT 'jubilacion' AND NOT 'revision' AND NOT 'para personas' AND NOT 'renovacion' AND NOT 'de' AND NOT 'tener' AND NOT 'comunicacion de' AND NOT 'esta' AND 'de pension'
+THEN CLASS: PNC CONTROL ANUAL
+CONFIDENCE: 0.500
+--------------------------------------------------
+

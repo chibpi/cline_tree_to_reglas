@@ -1,0 +1,13 @@
+/.venv
+/.~lock.classifier_comparison_results.csv#
+/categorias_cvo_exp.pkl
+/categorias_pen_exp.pkl
+/clasificador_cvo_exp.pkl
+/clasificador_pen_exp.pkl
+/textos_procesados.csv
+/textos_procesados_anonimo_gep.csv
+/textos_procesados_cvo.csv
+/textos_procesados_gep.csv
+/vectorizer_cvo_exp.pkl
+/vectorizer_pen_exp.pkl
+/__pycache__

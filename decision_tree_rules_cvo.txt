@@ -1,0 +1,161 @@
+DECISION TREE LOGICAL RULES
+==================================================
+
+Rules are applied sequentially. When a rule matches, the class is returned and no further rules are checked.
+
+RULE 1:
+IF NOT 'aparcamiento' AND NOT 'reconocimiento' AND NOT 'traslado' AND NOT 'reclamacion' AND NOT 'revision' AND NOT 'discapacidad' AND NOT 'comunicacion' AND NOT 'reducido' AND NOT 'remision expediente' AND NOT 'renovacion' AND NOT 'valoracion' AND NOT 'solicitar' AND NOT 'adjunto' AND NOT 'solicitud' AND 'recurso'
+THEN CLASS: Reclamación previa
+CONFIDENCE: 1.000
+--------------------------------------------------
+
+RULE 2:
+IF NOT 'aparcamiento' AND NOT 'reconocimiento' AND NOT 'traslado' AND NOT 'reclamacion' AND NOT 'revision' AND NOT 'discapacidad' AND NOT 'comunicacion' AND NOT 'reducido' AND NOT 'remision expediente' AND NOT 'renovacion' AND 'valoracion'
+THEN CLASS: Reconocimiento de grado de discapacidad
+CONFIDENCE: 1.000
+--------------------------------------------------
+
+RULE 3:
+IF NOT 'aparcamiento' AND NOT 'reconocimiento' AND NOT 'traslado' AND NOT 'reclamacion' AND NOT 'revision' AND NOT 'discapacidad' AND NOT 'comunicacion' AND NOT 'reducido' AND 'remision expediente'
+THEN CLASS: Traslado de expediente
+CONFIDENCE: 1.000
+--------------------------------------------------
+
+RULE 4:
+IF NOT 'aparcamiento' AND NOT 'reconocimiento' AND NOT 'traslado' AND NOT 'reclamacion' AND NOT 'revision' AND 'discapacidad' AND 'expediente' AND 'grado discapacidad'
+THEN CLASS: Reclamación previa
+CONFIDENCE: 1.000
+--------------------------------------------------
+
+RULE 5:
+IF NOT 'aparcamiento' AND 'reconocimiento' AND 'revision'
+THEN CLASS: Revisión a instancia de parte
+CONFIDENCE: 1.000
+--------------------------------------------------
+
+RULE 6:
+IF 'aparcamiento' AND NOT 'reclamacion'
+THEN CLASS: Tarjeta de aparcamiento
+CONFIDENCE: 0.996
+--------------------------------------------------
+
+RULE 7:
+IF NOT 'aparcamiento' AND NOT 'reconocimiento' AND 'traslado'
+THEN CLASS: Traslado de expediente
+CONFIDENCE: 0.983
+--------------------------------------------------
+
+RULE 8:
+IF NOT 'aparcamiento' AND NOT 'reconocimiento' AND NOT 'traslado' AND 'reclamacion' AND 'reclamacion previo'
+THEN CLASS: Reclamación previa
+CONFIDENCE: 0.963
+--------------------------------------------------
+
+RULE 9:
+IF NOT 'aparcamiento' AND 'reconocimiento' AND NOT 'revision' AND NOT 'reclamacion'
+THEN CLASS: Reconocimiento de grado de discapacidad
+CONFIDENCE: 0.954
+--------------------------------------------------
+
+RULE 10:
+IF NOT 'aparcamiento' AND NOT 'reconocimiento' AND NOT 'traslado' AND NOT 'reclamacion' AND NOT 'revision' AND 'discapacidad' AND NOT 'expediente' AND NOT 'recurso' AND NOT 'solicitar'
+THEN CLASS: Reconocimiento de grado de discapacidad
+CONFIDENCE: 0.919
+--------------------------------------------------
+
+RULE 11:
+IF NOT 'aparcamiento' AND NOT 'reconocimiento' AND NOT 'traslado' AND NOT 'reclamacion' AND NOT 'revision' AND NOT 'discapacidad' AND NOT 'comunicacion' AND 'reducido'
+THEN CLASS: Tarjeta de aparcamiento
+CONFIDENCE: 0.917
+--------------------------------------------------
+
+RULE 12:
+IF NOT 'aparcamiento' AND NOT 'reconocimiento' AND NOT 'traslado' AND NOT 'reclamacion' AND NOT 'revision' AND NOT 'discapacidad' AND 'comunicacion'
+THEN CLASS: --ND--
+CONFIDENCE: 0.880
+--------------------------------------------------
+
+RULE 13:
+IF NOT 'aparcamiento' AND NOT 'reconocimiento' AND NOT 'traslado' AND NOT 'reclamacion' AND NOT 'revision' AND NOT 'discapacidad' AND NOT 'comunicacion' AND NOT 'reducido' AND NOT 'remision expediente' AND 'renovacion'
+THEN CLASS: REENVIADO
+CONFIDENCE: 0.857
+--------------------------------------------------
+
+RULE 14:
+IF NOT 'aparcamiento' AND NOT 'reconocimiento' AND NOT 'traslado' AND NOT 'reclamacion' AND 'revision'
+THEN CLASS: Revisión a instancia de parte
+CONFIDENCE: 0.840
+--------------------------------------------------
+
+RULE 15:
+IF NOT 'aparcamiento' AND NOT 'reconocimiento' AND NOT 'traslado' AND NOT 'reclamacion' AND NOT 'revision' AND NOT 'discapacidad' AND NOT 'comunicacion' AND NOT 'reducido' AND NOT 'remision expediente' AND NOT 'renovacion' AND NOT 'valoracion' AND NOT 'solicitar' AND 'adjunto' AND 'solicitar'
+THEN CLASS: Reclamación previa
+CONFIDENCE: 0.800
+--------------------------------------------------
+
+RULE 16:
+IF NOT 'aparcamiento' AND NOT 'reconocimiento' AND NOT 'traslado' AND NOT 'reclamacion' AND NOT 'revision' AND 'discapacidad' AND NOT 'expediente' AND 'recurso'
+THEN CLASS: Reclamación previa
+CONFIDENCE: 0.800
+--------------------------------------------------
+
+RULE 17:
+IF NOT 'aparcamiento' AND NOT 'reconocimiento' AND NOT 'traslado' AND NOT 'reclamacion' AND NOT 'revision' AND NOT 'discapacidad' AND NOT 'comunicacion' AND NOT 'reducido' AND NOT 'remision expediente' AND NOT 'renovacion' AND NOT 'valoracion' AND NOT 'solicitar' AND 'adjunto' AND NOT 'solicitar'
+THEN CLASS: REENVIADO
+CONFIDENCE: 0.778
+--------------------------------------------------
+
+RULE 18:
+IF NOT 'aparcamiento' AND NOT 'reconocimiento' AND NOT 'traslado' AND 'reclamacion' AND NOT 'reclamacion previo' AND 'discapacidad' AND NOT 'revision'
+THEN CLASS: Reclamación previa
+CONFIDENCE: 0.741
+--------------------------------------------------
+
+RULE 19:
+IF NOT 'aparcamiento' AND 'reconocimiento' AND NOT 'revision' AND 'reclamacion'
+THEN CLASS: Reclamación previa
+CONFIDENCE: 0.727
+--------------------------------------------------
+
+RULE 20:
+IF NOT 'aparcamiento' AND NOT 'reconocimiento' AND NOT 'traslado' AND 'reclamacion' AND NOT 'reclamacion previo' AND NOT 'discapacidad'
+THEN CLASS: Libro de sugerencias y reclamaciones
+CONFIDENCE: 0.722
+--------------------------------------------------
+
+RULE 21:
+IF NOT 'aparcamiento' AND NOT 'reconocimiento' AND NOT 'traslado' AND NOT 'reclamacion' AND NOT 'revision' AND 'discapacidad' AND 'expediente' AND NOT 'grado discapacidad'
+THEN CLASS: Traslado de expediente
+CONFIDENCE: 0.700
+--------------------------------------------------
+
+RULE 22:
+IF NOT 'aparcamiento' AND NOT 'reconocimiento' AND NOT 'traslado' AND NOT 'reclamacion' AND NOT 'revision' AND NOT 'discapacidad' AND NOT 'comunicacion' AND NOT 'reducido' AND NOT 'remision expediente' AND NOT 'renovacion' AND NOT 'valoracion' AND 'solicitar'
+THEN CLASS: Reconocimiento de grado de discapacidad
+CONFIDENCE: 0.667
+--------------------------------------------------
+
+RULE 23:
+IF NOT 'aparcamiento' AND NOT 'reconocimiento' AND NOT 'traslado' AND NOT 'reclamacion' AND NOT 'revision' AND NOT 'discapacidad' AND NOT 'comunicacion' AND NOT 'reducido' AND NOT 'remision expediente' AND NOT 'renovacion' AND NOT 'valoracion' AND NOT 'solicitar' AND NOT 'adjunto' AND NOT 'solicitud' AND NOT 'recurso' AND 'solicitar'
+THEN CLASS: --ND--
+CONFIDENCE: 0.636
+--------------------------------------------------
+
+RULE 24:
+IF NOT 'aparcamiento' AND NOT 'reconocimiento' AND NOT 'traslado' AND 'reclamacion' AND NOT 'reclamacion previo' AND 'discapacidad' AND 'revision'
+THEN CLASS: Libro de sugerencias y reclamaciones
+CONFIDENCE: 0.600
+--------------------------------------------------
+
+RULE 25:
+IF NOT 'aparcamiento' AND NOT 'reconocimiento' AND NOT 'traslado' AND NOT 'reclamacion' AND NOT 'revision' AND NOT 'discapacidad' AND NOT 'comunicacion' AND NOT 'reducido' AND NOT 'remision expediente' AND NOT 'renovacion' AND NOT 'valoracion' AND NOT 'solicitar' AND NOT 'adjunto' AND 'solicitud'
+THEN CLASS: Reconocimiento de grado de discapacidad
+CONFIDENCE: 0.500
+--------------------------------------------------
+
+RULE 26:
+IF NOT 'aparcamiento' AND NOT 'reconocimiento' AND NOT 'traslado' AND NOT 'reclamacion' AND NOT 'revision' AND 'discapacidad' AND NOT 'expediente' AND NOT 'recurso' AND 'solicitar' AND 'grado'
+THEN CLASS: Reclamación previa
+CONFIDENCE: 0.500
+--------------------------------------------------
+

@@ -1,0 +1,73 @@
+true_class,predicted_class,count,classifier
+--ND--,--ND--,33,decision_tree
+--ND--,Reclamación previa,6,decision_tree
+--ND--,Reconocimiento de grado de discapacidad,14,decision_tree
+Libro de sugerencias y reclamaciones,Libro de sugerencias y reclamaciones,39,decision_tree
+Libro de sugerencias y reclamaciones,Reclamación previa,12,decision_tree
+Libro de sugerencias y reclamaciones,Reconocimiento de grado de discapacidad,3,decision_tree
+REENVIADO,--ND--,2,decision_tree
+REENVIADO,Libro de sugerencias y reclamaciones,1,decision_tree
+REENVIADO,REENVIADO,17,decision_tree
+REENVIADO,Reclamación previa,8,decision_tree
+REENVIADO,Reconocimiento de grado de discapacidad,2,decision_tree
+REENVIADO,Revisión a instancia de parte,1,decision_tree
+REENVIADO,Tarjeta de aparcamiento,7,decision_tree
+REENVIADO,Traslado de expediente,1,decision_tree
+Reclamación previa,--ND--,3,decision_tree
+Reclamación previa,Libro de sugerencias y reclamaciones,13,decision_tree
+Reclamación previa,REENVIADO,6,decision_tree
+Reclamación previa,Reclamación previa,126,decision_tree
+Reclamación previa,Reconocimiento de grado de discapacidad,9,decision_tree
+Reclamación previa,Revisión a instancia de parte,5,decision_tree
+Reclamación previa,Tarjeta de aparcamiento,1,decision_tree
+Reclamación previa,Traslado de expediente,1,decision_tree
+Reconocimiento de grado de discapacidad,--ND--,2,decision_tree
+Reconocimiento de grado de discapacidad,REENVIADO,5,decision_tree
+Reconocimiento de grado de discapacidad,Reclamación previa,11,decision_tree
+Reconocimiento de grado de discapacidad,Reconocimiento de grado de discapacidad,629,decision_tree
+Reconocimiento de grado de discapacidad,Revisión a instancia de parte,1,decision_tree
+Reconocimiento de grado de discapacidad,Tarjeta de aparcamiento,2,decision_tree
+Reconocimiento de grado de discapacidad,Traslado de expediente,3,decision_tree
+Revisión a instancia de parte,REENVIADO,1,decision_tree
+Revisión a instancia de parte,Reconocimiento de grado de discapacidad,10,decision_tree
+Revisión a instancia de parte,Revisión a instancia de parte,76,decision_tree
+Tarjeta acreditativa de grado de discapacidad,Reconocimiento de grado de discapacidad,2,decision_tree
+Tarjeta de aparcamiento,--ND--,1,decision_tree
+Tarjeta de aparcamiento,Libro de sugerencias y reclamaciones,1,decision_tree
+Tarjeta de aparcamiento,REENVIADO,3,decision_tree
+Tarjeta de aparcamiento,Reclamación previa,3,decision_tree
+Tarjeta de aparcamiento,Reconocimiento de grado de discapacidad,4,decision_tree
+Tarjeta de aparcamiento,Tarjeta de aparcamiento,869,decision_tree
+Traslado de expediente,Libro de sugerencias y reclamaciones,1,decision_tree
+Traslado de expediente,Reclamación previa,2,decision_tree
+Traslado de expediente,Reconocimiento de grado de discapacidad,1,decision_tree
+Traslado de expediente,Traslado de expediente,94,decision_tree
+--ND--,Reclamación previa,1,rules_based
+--ND--,Reconocimiento de grado de discapacidad,22,rules_based
+--ND--,Traslado de expediente,1,rules_based
+Libro de sugerencias y reclamaciones,Reconocimiento de grado de discapacidad,17,rules_based
+Libro de sugerencias y reclamaciones,Tarjeta de aparcamiento,2,rules_based
+REENVIADO,REENVIADO,4,rules_based
+REENVIADO,Reclamación previa,2,rules_based
+REENVIADO,Reconocimiento de grado de discapacidad,17,rules_based
+REENVIADO,Tarjeta de aparcamiento,8,rules_based
+REENVIADO,Traslado de expediente,1,rules_based
+Reclamación previa,REENVIADO,1,rules_based
+Reclamación previa,Reclamación previa,49,rules_based
+Reclamación previa,Reconocimiento de grado de discapacidad,70,rules_based
+Reclamación previa,Tarjeta de aparcamiento,5,rules_based
+Reclamación previa,Traslado de expediente,8,rules_based
+Reconocimiento de grado de discapacidad,REENVIADO,1,rules_based
+Reconocimiento de grado de discapacidad,Reclamación previa,3,rules_based
+Reconocimiento de grado de discapacidad,Reconocimiento de grado de discapacidad,631,rules_based
+Reconocimiento de grado de discapacidad,Tarjeta de aparcamiento,2,rules_based
+Reconocimiento de grado de discapacidad,Traslado de expediente,3,rules_based
+Revisión a instancia de parte,Reclamación previa,5,rules_based
+Revisión a instancia de parte,Reconocimiento de grado de discapacidad,81,rules_based
+Tarjeta acreditativa de grado de discapacidad,Reconocimiento de grado de discapacidad,2,rules_based
+Tarjeta de aparcamiento,Reclamación previa,1,rules_based
+Tarjeta de aparcamiento,Reconocimiento de grado de discapacidad,5,rules_based
+Tarjeta de aparcamiento,Tarjeta de aparcamiento,871,rules_based
+Traslado de expediente,Reclamación previa,1,rules_based
+Traslado de expediente,Reconocimiento de grado de discapacidad,2,rules_based
+Traslado de expediente,Traslado de expediente,89,rules_based
